@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wasted Space Tattoo Studio · Tattoos & piercings in Eastleigh, Edenvale</title>
+<meta name="description" content="Custom tattoos, cover-ups and piercings on North Rd, Eastleigh, Edenvale. 4.9 on Google from 90 reviews. WhatsApp or call 079 898 3019.">
+<meta name="theme-color" content="#f3ece0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141210'/%3E%3Cpath d='M16 26C8 21 6 16 9.5 12.5 12 10 15 11.5 16 14c1-2.5 4-4 6.5-1.5C26 16 24 21 16 26Z' fill='%23b3261e'/%3E%3C/svg%3E">
+<link rel="preload" href="media/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Archivo;src:url(media/fonts/archivo-wdth.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+:root{
+  --paper:#f3ece0;--paper-2:#e9dfcd;--card:#fbf7f0;--ink:#141210;--ink-2:#4d453d;--line:#d8ccb6;
+  --red:#b3261e;--red-soft:#f4d9d3;--stencil:#5b3fd1;--wa:#157a43;--wa-2:#0f6236;
+  --pad:clamp(16px,4vw,40px);--maxw:1200px;--r:18px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.55 Archivo,system-ui,-apple-system,"Segoe UI",sans-serif}
+svg,canvas,iframe{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:800;font-stretch:115%;letter-spacing:-.022em;line-height:.98}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--stencil);outline-offset:3px;border-radius:6px}
+
+.preview{background:var(--ink);color:#efe7d8;font-size:.8rem;text-align:center;padding:6px var(--pad)}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px;
+  padding:0 max(var(--pad),calc((100vw - 1360px) / 2 + var(--pad)));transition:background-color .25s,color .25s}
+.top.scrolled{background:rgba(20,18,16,.86);color:#f3ece0;-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4)}
+.brand{font-weight:800;font-stretch:125%;font-size:1.2rem;letter-spacing:-.03em;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;text-transform:uppercase}
+.brand svg{width:22px;height:22px;color:var(--red)}
+.top.scrolled .brand svg{color:#ff6b5e}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:0 22px;border-radius:999px;
+  font:600 1rem/1 Archivo,system-ui,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .15s ease,background-color .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-sm{min-height:44px;padding:0 16px;font-size:.92rem}
+.link{background:none;border:0;padding:0 4px;min-height:44px;font:600 .92rem/1 Archivo,system-ui,sans-serif;color:var(--ink-2);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding:20px var(--pad) 56px;max-width:1360px;margin:0 auto}
+.eyebrow{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-2)}
+.eyebrow b{color:var(--red);font-weight:700}
+h1{font-size:clamp(2.6rem,10.4vw,5.2rem);margin:14px 0 18px;font-stretch:118%}
+h1 em{font-style:normal;color:var(--red)}
+.lede{font-size:clamp(1.05rem,3.6vw,1.25rem);color:var(--ink-2);max-width:34em}
+.ctas{display:flex;gap:10px;margin:24px 0 18px}
+.ctas .btn{flex:1 1 0;padding:0 14px}
+.num{display:none}
+.proof{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;font-size:.95rem;color:var(--ink-2)}
+.proof b{color:var(--ink);font-weight:700}
+
+/* try the needle */
+.needle{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.needle-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:4px 4px 12px}
+.needle-head h2{font-size:1.35rem;font-stretch:112%}
+.pct{font:700 1.1rem/1 ui-monospace,"Cascadia Mono",Consolas,monospace;color:var(--stencil)}
+.skin{--skin-a:#e9c3a2;--skin-b:#d6a27e;position:relative;aspect-ratio:30/31;max-height:62svh;width:100%;margin:0 auto;border-radius:14px;overflow:hidden;
+  background:radial-gradient(120% 90% at 35% 25%,var(--skin-a) 0%,var(--skin-b) 100%);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.skin canvas{position:absolute;inset:0;width:100%;height:100%}
+.skin.active{touch-action:none;cursor:crosshair}
+.start{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:var(--ink);color:#fff}
+.start:hover{background:#000}
+.start:active{transform:translateX(-50%) scale(.97)}
+.skin.active .start,.skin.complete .start{display:none}
+.needle-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:12px 4px 2px}
+.help{font-size:.92rem;color:var(--ink-2);flex:1 1 220px}
+.tones{display:flex;gap:6px}
+.tone{width:44px;height:44px;border-radius:50%;border:3px solid transparent;cursor:pointer;padding:0;background-clip:padding-box;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.tone[aria-pressed="true"]{border-color:var(--ink)}
+.done{margin-top:12px;padding:18px;border-radius:14px;background:var(--ink);color:#f3ece0}
+.done h3{font-size:1.35rem;font-stretch:110%;color:#fff}
+.done p{color:#cfc5b4;margin-top:8px}
+.done .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.done .btn-ghost{color:#fff;border-color:#fff}
+.done .btn-ghost:hover{background:#fff;color:var(--ink)}
+
+/* sections */
+section.block{padding:clamp(64px,10vw,120px) 0}
+.kicker{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--red);margin-bottom:12px}
+h2{font-size:clamp(2.1rem,7.4vw,3.6rem)}
+.sub{font-size:1.1rem;color:var(--ink-2);margin-top:14px;max-width:36em}
+
+.work{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:14px}
+.work li{border-top:2px solid var(--ink);padding:20px 0 24px;display:flex;flex-direction:column;gap:8px}
+.work .n{font:700 .8rem/1 ui-monospace,"Cascadia Mono",Consolas,monospace;color:var(--red)}
+.work h3{font-size:1.5rem;font-stretch:112%}
+.work p{color:var(--ink-2)}
+.work blockquote{margin:6px 0 0;padding-left:14px;border-left:3px solid var(--red);font-weight:500;color:var(--ink)}
+.work cite{display:block;font-style:normal;font-size:.85rem;color:var(--ink-2);margin-top:4px}
+
+.say{background:var(--ink);color:#f3ece0}
+.say h2{color:#fff}
+.say-top{display:grid;gap:28px;align-items:end}
+.score{font-weight:800;font-stretch:125%;font-size:clamp(4.5rem,22vw,8rem);line-height:.85;letter-spacing:-.05em}
+.score small{font-size:.3em;letter-spacing:0;font-stretch:100%;color:#cfc5b4;font-weight:600;margin-left:.3em}
+.stars{color:#ffc83d;font-size:1.4rem;letter-spacing:.12em;margin-top:10px}
+.mentions{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0}
+.mentions li{border:1px solid #4a423a;border-radius:999px;padding:8px 14px;font-size:.92rem;color:#efe7d8}
+.quotes{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:14px}
+.quotes li{background:#1f1b18;border-radius:var(--r);padding:22px}
+.quotes q{display:block;font-size:1.15rem;font-weight:600;color:#fff;line-height:1.4;quotes:"\201C" "\201D"}
+.quotes span{display:block;margin-top:12px;font-size:.88rem;color:#cfc5b4}
+.say .btn-ghost{color:#fff;border-color:#fff;margin-top:28px}
+.say .btn-ghost:hover{background:#fff;color:var(--ink)}
+
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;margin-top:40px}
+.addr{font-size:1.3rem;font-weight:600;line-height:1.35}
+.hours{border-collapse:collapse;margin-top:20px;width:100%;max-width:360px}
+.hours th,.hours td{text-align:left;padding:9px 0;border-bottom:1px solid var(--line);font-weight:500}
+.hours th{font-weight:600}
+.hours td{text-align:right;color:var(--ink-2)}
+.visit-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--paper-2);width:100%;aspect-ratio:4/3}
+.map iframe{width:100%;height:100%;border:0}
+
+footer{background:var(--ink);color:#cfc5b4;padding:44px 0 calc(44px + env(safe-area-inset-bottom));font-size:.92rem}
+footer .wrap{display:grid;gap:18px}
+footer b{color:#fff}
+footer a{color:#fff;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+.credit{color:#a59b8b;font-size:.85rem}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+  background:rgba(20,18,16,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transform:translateY(110%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.bar .btn{flex:1}
+.bar .btn-ghost{color:#fff;border-color:#fff}
+.bar.show{transform:none}
+body.bar-on{padding-bottom:76px}
+body.bar-on .top .btn{visibility:hidden}
+
+@media (min-width:480px){.ctas .btn{flex:0 0 auto;padding:0 22px}.num{display:inline}}
+@media (min-width:768px){
+  .work{grid-template-columns:repeat(2,1fr);gap:8px 32px}
+  .quotes{grid-template-columns:repeat(2,1fr)}
+  .say-top{grid-template-columns:auto 1fr;gap:64px}
+  .bar{display:none}
+  body.bar-on{padding-bottom:0}
+  body.bar-on .top .btn{visibility:visible}
+}
+@media (min-width:1024px){
+  .hero{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:center;gap:56px;min-height:calc(100svh - 92px);padding-top:8px}
+  .work{grid-template-columns:repeat(3,1fr)}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .visit-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .bar,.top,.btn{transition:none}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TattooParlor","name":"Wasted Space Tattoo Studio","telephone":"+27798983019","address":{"@type":"PostalAddress","streetAddress":"North Rd, Eastleigh","addressLocality":"Edenvale","postalCode":"1609","addressCountry":"ZA"},"openingHours":["Tu-Sa 10:00-17:00","Su 10:00-14:00"]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></symbol>
+  <symbol id="i-call" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21C4.5 16.3 2.5 11.6 5.6 8.3 7.9 6 10.9 7.2 12 9.6c1.1-2.4 4.1-3.6 6.4-1.3 3.1 3.3 1.1 8-6.4 12.7Z"/></symbol>
+</svg>
+
+<aside class="preview" aria-label="Preview notice">Website preview by Keagen</aside>
+
+<header class="top" id="top">
+  <a class="brand" href="#hero" aria-label="Wasted Space Tattoo Studio, back to top"><svg aria-hidden="true"><use href="#i-heart"/></svg>Wasted Space</a>
+  <a class="btn btn-wa btn-sm" href="https://wa.me/27798983019?text=Hi%20Wasted%20Space%2C%20I'd%20like%20to%20book.%0ATattoo%20or%20piercing%3A%20%0AIdea%2C%20placement%20and%20size%3A%20"><svg><use href="#i-wa"/></svg>Book</a>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div>
+      <p class="eyebrow"><b>Tattoo &amp; piercing studio</b> · Eastleigh, Edenvale</p>
+      <h1>Tattoos &amp; piercings, done <em>properly</em>.</h1>
+      <p class="lede">Custom pieces, cover-ups and piercings from ears to septum, in a clean, chilled shop on North Rd. Try the needle, then book the real thing on WhatsApp.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/27798983019?text=Hi%20Wasted%20Space%2C%20I'd%20like%20to%20book.%0ATattoo%20or%20piercing%3A%20%0AIdea%2C%20placement%20and%20size%3A%20"><svg><use href="#i-wa"/></svg>WhatsApp us</a>
+        <a class="btn btn-ghost" href="tel:+27798983019" aria-label="Call 079 898 3019"><svg><use href="#i-call"/></svg>Call<span class="num"> 079 898 3019</span></a>
+      </div>
+      <ul class="proof">
+        <li><b>4.9 ★</b> from 90 Google reviews</li>
+        <li><b>Open</b> Tue–Sun</li>
+      </ul>
+    </div>
+
+    <div class="needle" id="needle">
+      <div class="needle-head"><h2>Try the needle</h2><span class="pct" id="pct" aria-hidden="true">0%</span></div>
+      <div class="skin" id="skin">
+        <canvas id="trace"></canvas>
+        <button type="button" class="btn start" id="start">Start tracing</button>
+      </div>
+      <div class="needle-foot">
+        <p class="help">Trace the purple stencil with your finger. At 85% it's done.</p>
+        <div class="tones" role="group" aria-label="Skin tone">
+          <button type="button" class="tone" aria-label="Light skin" aria-pressed="false" data-a="#f3d7c0" data-b="#e4b996" style="background:#ebc8aa"></button>
+          <button type="button" class="tone" aria-label="Medium skin" aria-pressed="true" data-a="#e9c3a2" data-b="#d6a27e" style="background:#dfb28f"></button>
+          <button type="button" class="tone" aria-label="Deep skin" aria-pressed="false" data-a="#9a6a4a" data-b="#6e4630" style="background:#845a3e"></button>
+        </div>
+      </div>
+      <button type="button" class="link" id="skip">Skip, show me the finished piece</button>
+      <p class="sr" id="status" aria-live="polite"></p>
+      <div class="done" id="done" hidden>
+        <h3>Stencil done. Now let a pro ink it.</h3>
+        <p>Send us your idea, where you want it and roughly how big. We'll get back to you on WhatsApp.</p>
+        <div class="row">
+          <a class="btn btn-wa" href="https://wa.me/27798983019?text=Hi%20Wasted%20Space%2C%20I%20tried%20the%20needle%20on%20your%20site.%20I'd%20like%20to%20book%20a%20tattoo.%0AIdea%3A%20%0APlacement%20and%20size%3A%20"><svg><use href="#i-wa"/></svg>Book a tattoo</a>
+          <button type="button" class="btn btn-ghost" id="again">Trace again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <p class="kicker">The work</p>
+      <h2>Bring the idea. Leave with ink.</h2>
+      <p class="sub">What people come in for, in their own words from Google.</p>
+      <ul class="work">
+        <li><span class="n">01</span><h3>Custom pieces</h3><p>Drawn for you, in the style you're after.</p>
+          <blockquote>“His style is exactly what I’ve been looking for.”<cite>Hannes V.</cite></blockquote></li>
+        <li><span class="n">02</span><h3>Cover-ups</h3><p>An old tattoo you've gone off? It can be covered.</p>
+          <blockquote>“Thank you to Amos who did an AMAZING job at my cover up”<cite>Robert B.</cite></blockquote></li>
+        <li><span class="n">03</span><h3>Game &amp; anime</h3><p>Characters, symbols and fan pieces.</p>
+          <blockquote>“A.rt.mos (Amos) is definitely the dude to see for game and anime related tattoos.”<cite>Shy's Alley</cite></blockquote></li>
+        <li><span class="n">04</span><h3>Sleeves &amp; big pieces</h3><p>Work that takes more than one sitting.</p>
+          <blockquote>“they did a big piece on my leg and I am so happy with it”<cite>Choné A.</cite></blockquote></li>
+        <li><span class="n">05</span><h3>Piercings</h3><p>Ears, helix, nose, septum, belly and labret.</p>
+          <blockquote>“Super professional and clean, I left pain free.”<cite>Amelia B.</cite></blockquote></li>
+        <li><span class="n">06</span><h3>Aftercare &amp; jewellery</h3><p>Swelling, a new bar or a jewellery change: message us.</p>
+          <blockquote>“she put a new longer bar in for me. So professional and caring!!”<cite>Erin N.</cite></blockquote></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block say" id="reviews">
+    <div class="wrap">
+      <div class="say-top">
+        <div>
+          <p class="score">4.9<small>on Google</small></p>
+          <p class="stars" aria-label="4.9 out of 5 stars">★★★★★</p>
+        </div>
+        <div>
+          <h2>90 reviews. Mostly five stars.</h2>
+          <p class="sr">What reviewers mention:</p>
+          <ul class="mentions"><li>Clean and sterile</li><li>Parking right outside</li><li>Merch in the shop</li><li>The playlist</li></ul>
+        </div>
+      </div>
+      <ul class="quotes">
+        <li><q>Lee is no artist, he's a wizzard!</q><span>Alexi K.</span></li>
+        <li><q>Got my first tattoo here a few years ago and drove an hour today to go back</q><span>Eugene V.</span></li>
+        <li><q>Great artists. Super friendly. Professional. My go-to place for tattoos and piercings.</q><span>Siobhan C.</span></li>
+        <li><q>The shop is very clean and professionally kept too.</q><span>Anne B.</span></li>
+        <li><q>I went and got my belly pierced as a walk in and they did a wonderful job, everything was sterile</q><span>Allison V.</span></li>
+        <li><q>Fantastic service and you can trust the tattoo will be done correctly.</q><span>Rynhardt J.</span></li>
+      </ul>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Wasted%20Space%20Tattoo%20Studio%2C%20North%20Rd%2C%20Eastleigh%2C%20Edenvale" target="_blank" rel="noopener">Read them on Google</a>
+    </div>
+  </section>
+
+  <section class="block" id="visit">
+    <div class="wrap">
+      <p class="kicker">Visit</p>
+      <h2>Find the shop.</h2>
+      <div class="visit-grid">
+        <div>
+          <p class="addr">North Rd, Eastleigh<br>Edenvale, 1609</p>
+          <table class="hours">
+            <caption class="sr">Opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Tuesday to Saturday</th><td>10 am – 5 pm</td></tr>
+              <tr><th scope="row">Sunday</th><td>10 am – 2 pm</td></tr>
+              <tr><th scope="row">Monday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <div class="visit-ctas">
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Wasted%20Space%20Tattoo%20Studio%2C%20North%20Rd%2C%20Eastleigh%2C%20Edenvale%2C%201609" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Directions</a>
+            <a class="btn btn-wa" href="https://wa.me/27798983019?text=Hi%20Wasted%20Space%2C%20I'd%20like%20to%20book.%0ATattoo%20or%20piercing%3A%20%0AIdea%2C%20placement%20and%20size%3A%20"><svg><use href="#i-wa"/></svg>WhatsApp to book</a>
+            <a class="btn btn-ghost" href="tel:+27798983019"><svg><use href="#i-call"/></svg>Call</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Map showing Wasted Space Tattoo Studio on North Rd, Eastleigh, Edenvale" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Wasted%20Space%20Tattoo%20Studio%2C%20North%20Rd%2C%20Eastleigh%2C%20Edenvale&amp;z=15&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Wasted Space Tattoo Studio</b> · North Rd, Eastleigh, Edenvale, 1609 · <a href="tel:+27798983019">079 898 3019</a></p>
+    <p><b>Privacy (POPIA):</b> this site sets no cookies and runs no tracking. If you WhatsApp or call us, we use your number and details only to reply and to book you in. The map is provided by Google and loads from Google when you scroll to it. Review quotes are from public Google reviews.</p>
+    <p class="credit">Website by Keagen</p>
+  </div>
+</footer>
+
+<div class="bar" id="bar" aria-hidden="true">
+  <a class="btn btn-wa" tabindex="-1" href="https://wa.me/27798983019?text=Hi%20Wasted%20Space%2C%20I'd%20like%20to%20book.%0ATattoo%20or%20piercing%3A%20%0AIdea%2C%20placement%20and%20size%3A%20"><svg><use href="#i-wa"/></svg>Book</a>
+  <a class="btn btn-ghost" tabindex="-1" href="tel:+27798983019"><svg><use href="#i-call"/></svg>Call</a>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
